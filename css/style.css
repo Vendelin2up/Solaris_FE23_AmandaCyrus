@@ -1,0 +1,193 @@
+body {
+  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 4px;
+}
+input {
+  border-radius: 4px;
+  background: linear-gradient(90deg, purple 0%, rebeccapurple 100%);
+  border: none;
+  display: inline-block;
+  color: whitesmoke;
+}
+.search-button {
+  border-radius: 4px;
+  background: linear-gradient(90deg, purple 0%, rebeccapurple 100%);
+  border: none;
+  display: inline-block;
+  color: whitesmoke;
+  box-shadow: #ef5f5f;
+}
+
+.sun {
+  background: #ffd029;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: left;
+  margin-left: -350px;
+  box-shadow: 0px 0px 250px 0px #ffd02933;
+}
+
+.planet-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background: #41a45b;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;*/
+}
+
+.merkurius {
+  width: 14px;
+  height: 14px;
+  top: 443px;
+  left: 203px;
+  background: #888888;
+  border-radius: 50%;
+}
+.venus {
+  width: 26px;
+  height: 26px;
+  top: 437px;
+  left: 280px;
+  background: #e7cdcd;
+  border-radius: 50%;
+}
+
+.jorden {
+  width: 28px;
+  height: 28px;
+  top: 436px;
+  left: 375px;
+  background: #428ed4;
+  border-radius: 50%;
+}
+
+.mars {
+  width: 14px;
+  height: 14px;
+  top: 443px;
+  left: 473px;
+  background: #ef5f5f;
+  border-radius: 50%;
+}
+.jupiter {
+  width: 188px;
+  height: 188px;
+  top: 356px;
+  left: 576px;
+  background: #e29468;
+  border-radius: 50%;
+}
+.saturnus {
+  width: 144px;
+  height: 144px;
+  top: 378px;
+  left: 875px;
+  background: #c7aa72;
+  border-radius: 50%;
+}
+.saturn-rings {
+  
+  top: 50%; /* Positionera den vertikalt i mitten av Saturnus */
+  left: 50%; /* Positionera den horisontellt i mitten av Saturnus */
+  width: 200px; /* Bredden på ringarna */
+  height: 2px; /* Tjockleken på ringarna */
+  background-color: #ffffff; /* Färg på ringarna */
+  transform-origin: 0% 0%; /* Rätt punkt att rotera från */
+  transform: rotate(45deg); /* Rotera ringarna för en mer naturlig utseende */
+}
+.uranus {
+  width: 66px;
+  height: 66px;
+  top: 417px;
+  left: 1136px;
+  background: #c9d4f1;
+  border-radius: 50%;
+}
+.neptunus {
+  width: 66px;
+  height: 66px;
+  top: 417px;
+  left: 1306px;
+  background: #7a91a7;
+  border-radius: 50%;
+}
+
+#infoBox {
+  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+  opacity: .9;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 650px;
+  max-height: 590px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+#infoBox h2,
+#infoBox h1 {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  opacity: 1;
+}
+#infoBox h3,
+#infoBox h4 {
+  color: white;
+ 
+}
+#infoBox p {
+  color: #ffffff;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  opacity: 1;
+  margin: 21.28px 5px ;
+}
+.info-container {
+  display: flex;
+  flex-direction: column; /* Kolumnlayout för flexkontainern */
+}
+
+.info-container h3 {
+  margin-top: 20px;
+}
+
+.info-container .flex-row {
+  display: flex;
+  flex-direction: row; /* Radlayout för denna flexrad */
+  align-items: flex-start; /* Centrera elementen vertikalt */
+  
+}
+
+.info-container .flex-row .info-title {
+  margin-right: 10px; /* Lägger till lite mellanrum mellan titel och värde */
+
+}
+#closeButton {
+  border-radius: 4px;
+  background: linear-gradient(90deg, purple 0%, rebeccapurple 100%);
+  border: none;
+  color: whitesmoke;
+  box-shadow: #ef5f5f;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+.planet-container > div {
+  cursor: pointer;
+}
