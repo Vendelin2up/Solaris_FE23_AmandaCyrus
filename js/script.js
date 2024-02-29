@@ -44,44 +44,18 @@ bodiesInfo().then(() => {
 //   });
 // });
 
-// Lägg till en händelselyssnare för klickhändelsen för att kunna få upp rätt
-// info till rätt planet. Finns säkert ett snyggare sätt att skriva med kortare
-// kod men jag har skrivit så här nu, antagligen den långa vägen. 
-sun.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[0]);
-});
-merkurius.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[1]);
-});
-venus.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[2]);
-});
-jorden.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[3]);
-});
-mars.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[4]);
-});
-jupiter.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[5]);
-});
-saturnus.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[6]);
-});
-uranus.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[7]);
-});
-neptunus.addEventListener("click", function (event) {
-  event.stopPropagation();
-  displayPlanetInfo(fetchData.bodies[8]);
+// Skapa en array med alla planet-element
+const planetElements = [
+  sun, merkurius, venus, jorden, mars, jupiter, saturnus, uranus, neptunus
+];
+
+// Förkortade 35 rader kod till denna istället. 
+// Loopa över planet-elementen och lägg till klickhändelselyssnare för varje planet
+planetElements.forEach((planet, index) => {
+  planet.addEventListener("click", function (event) {
+    event.stopPropagation();
+    displayPlanetInfo(fetchData.bodies[index]);
+  });
 });
 
 //hämnta varje planet, sätt eventlistener på varje element, och sen vad som ska hända när man klickar på varje
